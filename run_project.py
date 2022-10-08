@@ -72,8 +72,9 @@ class ProjectRunner:
             cnt+=n_cnt
         nodes = result.traverse_list()
         if sort:
+            print(nodes)
             nodes = sorted(nodes,key=lambda a:a.tf_idf,reverse=True)
-        return [node.value for node in result.traverse_list()],cnt
+        return [node.value for node in nodes],cnt
 
     def _get_postings(self,tern):
         """ Function to get the postings list of a term from the index.
