@@ -1,0 +1,26 @@
+{
+  "postingsList": {},
+  "postingsListSkip": {},
+  "daatAnd": {
+    "year": { "results": [], "num_docs": 0, "num_comparisons": null }
+  },
+  "daatAndSkip": {
+    "year": { "results": [], "num_docs": 0, "num_comparisons": null }
+  },
+  "daatAndTfIdf": {
+    "year": { "results": [], "num_docs": 0, "num_comparisons": null }
+  },
+  "daatAndSkipTfIdf": {
+    "year": { "results": [], "num_docs": 0, "num_comparisons": null }
+  },
+  "sanity": {
+    "index_type": "<class 'collections.OrderedDict'>",
+    "indexer_type": "<class 'indexer.Indexer'>",
+    "post_mem": "<linkedlist.LinkedList object at 0x102aff070>",
+    "post_type": "<class 'linkedlist.LinkedList'>",
+    "node_mem": "<linkedlist.Node object at 0x102aff0a0>",
+    "node_type": "<class 'linkedlist.Node'>",
+    "node_value": "2550",
+    "command_result": ""
+  }
+}
