@@ -46,6 +46,7 @@ class Indexer:
     def add_skip_connections(self):
         """ For each postings list in the index, add skip pointers.
             To be implemented."""
+        # self.inverted_index['hydroxychloroquin'].add_skip_connections()
         for ll in self.inverted_index.values():
             ll.add_skip_connections()
 

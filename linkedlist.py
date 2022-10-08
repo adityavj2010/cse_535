@@ -61,7 +61,7 @@ class LinkedList:
         n_skips = math.floor(math.sqrt(self.length))
         if n_skips * n_skips == self.length:
             n_skips = n_skips - 1
-        
+        self.n_skips = n_skips
         """ Write logic to add skip pointers to the linked list. 
             This function does not return anything.
             To be implemented."""
@@ -110,7 +110,7 @@ class LinkedList:
             
         _value,cnt = value
         end_node = Node(_value)
-        end_node.tf_idf = cnt
+        end_node.tf_idf = cnt        
         if not self.start_node:
             self.start_node = end_node
             self.end_node = end_node
