@@ -21,10 +21,10 @@ class Indexer:
         """ This function adds each tokenized document to the index. This in turn uses the function add_to_index
             Already implemented."""
         for t in tokenized_document:
-           
-            self.add_to_index(t, doc_id)
+            total_tokens = len(tokenized_document)
+            self.add_to_index(t, doc_id,total_tokens)
 
-    def add_to_index(self, term_, doc_id_):
+    def add_to_index(self, term_, doc_id_,total_tokens):
         """ This function adds each term & document id to the index.
             If a term is not present in the index, then add the term to the index & initialize a new postings list (linked list).
             If a term is present, then add the document to the appropriate position in the posstings list of the term.
@@ -33,7 +33,7 @@ class Indexer:
         if term not in self.inverted_index:
             self.inverted_index[term] = LinkedList()
         
-        self.inverted_index[term].insert_at_end((doc_id_,cnt))
+        self.inverted_index[term].insert_at_end((doc_id_,cnt/total_tokens))
 
     def sort_terms(self):
         """ Sorting the index by terms.

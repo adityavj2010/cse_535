@@ -42,3 +42,4 @@ class Preprocessor:
             if w not in self.stop_words:
                 cnter[self.ps.stem(w)]+=1    
         return cnter.items()
+        

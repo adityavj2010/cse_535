@@ -109,7 +109,7 @@ class LinkedList:
         
             
         _value,cnt = value
-        end_node = Node(_value)
+        end_node = Node(_value)        
         end_node.tf_idf = cnt        
         if not self.start_node:
             self.start_node = end_node

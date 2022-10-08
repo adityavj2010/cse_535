@@ -71,8 +71,7 @@ class ProjectRunner:
             result,n_cnt = self._merge(result,self.indexer.get_index()[query],skip)
             cnt+=n_cnt
         nodes = result.traverse_list()
-        if sort:
-            print(nodes)
+        if sort:            
             nodes = sorted(nodes,key=lambda a:a.tf_idf,reverse=True)
         return [node.value for node in nodes],cnt
 
