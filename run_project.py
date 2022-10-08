@@ -241,4 +241,4 @@ if __name__ == "__main__":
     runner.run_indexer(corpus)
     # print("started application")
     # print(runner.run_queries(["year"],"random"))
-    app.run(host="0.0.0.0", port=9999,debug=True)
+    app.run(host="0.0.0.0", port=9999,debug=False)
