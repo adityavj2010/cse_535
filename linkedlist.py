@@ -66,22 +66,37 @@ class LinkedList:
             To be implemented."""
         skip_node = self.start_node
         head = self.start_node
-        if n_skips>0:
-            for i in range(n_skips):
-                if skip_node.next:
-                    skip_node = skip_node.next
-        else:
-            return
         self.skip_length = 0
-        while head and skip_node:
-            head.skip = skip_node
-            self.skip_length+=1
-            for i in range(n_skips):
-                if skip_node and head:
-                    skip_node = skip_node.next
-                    head = head.next
+        while head:
+            skip = head
+            finished = False
+            for i in range(n_skips+1):
+                if skip:
+                    skip = skip.next
                 else:
-                    return
+                    finished = True
+                    break
+            if finished:
+                return
+            head.skip = skip
+            head = head.skip
+            self.skip_length+=1
+        # if n_skips>0:
+        #     for i in range(n_skips):
+        #         if skip_node.next:
+        #             skip_node = skip_node.next
+        # else:
+        #     return
+        # self.skip_length = 0
+        # while head and skip_node:
+        #     head.skip = skip_node
+        #     self.skip_length+=1
+        #     for i in range(n_skips):
+        #         if skip_node and head:
+        #             skip_node = skip_node.next
+        #             head = head.next
+        #         else:
+        #             return
 
         
 
