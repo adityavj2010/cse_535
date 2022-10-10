@@ -20,8 +20,9 @@ class Indexer:
     def generate_inverted_index(self, doc_id, tokenized_document):
         """ This function adds each tokenized document to the index. This in turn uses the function add_to_index
             Already implemented."""
+        total_tokens = len(tokenized_document)
+
         for t in tokenized_document:
-            total_tokens = len(tokenized_document)
             self.add_to_index(t, doc_id,total_tokens)
 
     def add_to_index(self, term_, doc_id_,total_tokens):

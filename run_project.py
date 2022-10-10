@@ -102,9 +102,9 @@ class ProjectRunner:
                 # print('tokenized_document',tokenized_document)
                 self.indexer.generate_inverted_index(doc_id, tokenized_document)
         self.indexer.sort_terms()
-        print("Adding skips")
+        
         self.indexer.add_skip_connections()
-        print("Calculating tf_idf")
+        
         self.indexer.calculate_tf_idf()
         
 
@@ -206,7 +206,7 @@ def execute_query():
     """ Dumping the results to a JSON file. """
     with open(output_location, 'w') as fp:
         json.dump(output_dict, fp)
-    print('dumped the dict')
+    
     response = {
         "Response": output_dict,
         "time_taken": str(time.time() - start_time),
