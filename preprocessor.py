@@ -32,7 +32,7 @@ class Preprocessor:
             To be implemented."""
     
         text = text.lower()
-        text = re.sub('[^A-Za-z]+', ' ', text)
+        text = re.sub('[^A-Za-z0-9]+', ' ', text)
         words = text.split()
         
         # words=[word.lower() for word in words if word.isalpha()]
