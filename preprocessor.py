@@ -43,14 +43,3 @@ class Preprocessor:
                 cnter[self.ps.stem(w)]+=1    
         return cnter.items()
 
-E_44588 = "Should Patients Receiving ACE Inhibitors or Angiotensin Receptor Blockers be Switched to Other Antihypertensive Drugs to Prevent or Improve Prognosis of Novel Coronavirus Disease 2019 (COVID-19)?"
-E_89636 = "In Silico assessment of the impact of 2019 novel coronavirus (2019-nCoV) genomic variation on published real-time quantitative polymerase chain reaction detection assays"
-
-a = Preprocessor().tokenizer(E_44588)
-b = Preprocessor().tokenizer(E_89636)
-
-sum_a = sum(list(map(lambda s:s[1],a)))
-sum_b = sum(list(map(lambda s:s[1],b)))
-
-print('E_44588',len(a),sum_a)
-print('E_89636',len(b),sum_b)
